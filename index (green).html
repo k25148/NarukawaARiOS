@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>demotopassAR</title>
+  <title>NarukawaARiOS</title>
 
   <!-- A-Frame -->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -151,7 +151,7 @@
           side: THREE.DoubleSide
         });
 
-        const geometry = new THREE.PlaneGeometry(1, 1.7778);
+        const geometry = new THREE.PlaneGeometry(2, 2.5556);
 
         const mesh = new THREE.Mesh(geometry, material);
         mesh.renderOrder = 10;
@@ -195,7 +195,7 @@
     <a-assets>
       <video
         id="demoVideo"
-        src="https://pub-ea83f2fd21904eceaa0a3917e464aaf5.r2.dev/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%2001_H.265.mov"
+        src="https://pub-ea83f2fd21904eceaa0a3917e464aaf5.r2.dev/%E7%94%9F%E5%B7%9D_1_H.265.mov"
         preload="auto"
         loop
         playsinline
@@ -256,7 +256,7 @@
         renderer.setClearAlpha(0);
       }
 
-      setStatus("準備完了。先生の写真を映してください。");
+      setStatus("準備完了。生川先生の写真を映してください。");
     });
 
     // 動画読み込み確認
@@ -271,13 +271,13 @@
 
     video.addEventListener("error", () => {
       console.error("動画読み込みエラー:", video.error);
-      setStatus("動画を読み込めません。ファイル名を確認してください。");
+      setStatus("動画を読み込めません。拡張子を確認してください。");
     });
 
     // 音声読み込み確認
     audio.addEventListener("error", () => {
       console.error("音声読み込みエラー:", audio.error);
-      setStatus("音声を読み込めません。demo_audio.mp3を確認してください。");
+      setStatus("音声を読み込めません。");
     });
 
     // 再生開始
